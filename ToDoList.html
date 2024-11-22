@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="fa">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>لیست کارها</title>
+    <link rel="stylesheet" href="CSS/CSS.css">
+</head>
+
+<body>
+    <header>
+        <h1>TO DO LIST</h1> 
+    </header>
+<main>
+    <div class="task-list">
+        <ul id="task-list"></ul>
+    </div>
+    <div class="task-form">
+            <input type="text" id="task-input" placeholder="کار جدید خود را وارد کنید" required>
+            
+            <label for="task-time">ساعت</label>
+            <input type="time" id="task-time" required>
+            
+            <label for="task-date">تاریخ</label>
+            <input type="date" id="task-date" required>
+            
+            <label for="task-details">جزییات</label>
+            <textarea id="task-details" placeholder=".. جزییات کار"></textarea>
+
+        <button id="add-task-button">اضافه کردن</button>
+    </div>
+</main>
+
+    <script src="JavaScript/JS.js"></script>
+</body>
+
+</html>

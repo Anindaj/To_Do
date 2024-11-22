@@ -1,0 +1,230 @@
+* {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #b9d7ea;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+
+
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 20px;
+    background-color: #33bbec;
+    color: rgb(183, 226, 239);
+}
+
+header h1 {
+    text-align: center;
+    margin-left: 10px;
+    margin-right: 10px;
+    font-size: 70px;
+}
+
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    width: 100%;
+    padding: 20px;
+    flex-direction: reverse;
+    max-width: 1200px;
+    margin-top: 70px;
+}
+
+
+.task-form {
+    width: 50%;
+    padding: 20px;
+    text-align: right;
+    border: 1px solid gray;
+    border-radius: 20px;
+    background: #11111111;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.task-form input {
+    width: calc(100% - 22px);
+    padding: 10px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    border: 1px solid #949090;
+    border-radius: 20px;
+    height: 44px;
+    text-align: right;
+    font-size: medium;
+}
+
+.task-form textarea {
+    margin-top: 5px;
+    padding: 40px;
+    width: calc(100% - 22px);
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    height: 200px;
+    margin-top: 10px;
+    text-align: right;
+    font-size: large;
+}
+
+.task-form label {
+    margin-top: 10px;
+    color: rgb(29, 32, 32);
+}
+
+.task-form button {
+    padding: 10px;
+    background-color: #2497e3;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.task-form button:hover {
+    background-color: #115591;
+    color: black;
+}
+
+
+
+.task-list {
+    width: 50%;
+    padding: 20px;
+    text-align: right;
+    margin-right: 40px;
+
+}
+
+.task-list ul {
+    list-style: none;
+    padding: 20px;
+    border: 1px solid gray;
+    border-radius: 20px;
+}
+
+.task-list li {
+    flex-direction: column;
+    background-color: #f9f9f9;
+    padding: 10px;
+    margin: 10px;
+    border: 1px solid #ddd;
+    border-radius: 20px;
+    position: relative;
+}
+
+li.completed>div:first-child {
+    text-decoration: line-through;
+}
+
+.task-summary {
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.task-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #ffffff;
+    border: 2px solid #4895e8;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.task-buttons {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    margin-top: 10px;
+    height: 40px;
+}
+
+.complete-button,
+.edit-button,
+.delete-button,
+.details-button {
+    padding: 5px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #2497e3;
+    color: white;
+    transition: background-color 0.3s;
+}
+
+.complete-button:hover,
+.edit-button:hover,
+.delete-button:hover,
+.details-button:hover {
+    background-color: #115591;
+    color: black;
+}
+
+.details-div {
+    width: 100%;
+    background-color: #f9f9f9;
+    padding: 15px;
+    border-radius: 5px;
+    margin-top: 15px;
+    display: none;
+}
+
+.details-div p {
+    padding: 10px;
+    margin: 5px 0;
+    margin-top: 5px;
+    border: 1px solid gray;
+    border-radius: 20px;
+    background-color: #2497e3;
+    opacity: 80%;
+    color: black;
+}
+
+.details-div .task-time-date {
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 5px;
+
+}
+
+@media (max-width: 768px) {
+    main {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .task-list,
+    .task-form {
+        width: 100%;
+    }
+
+    .details-div .task-time-date {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 768px) {
+    main {
+        flex-direction: column;
+        align-items: stretch;
+    }
+}
