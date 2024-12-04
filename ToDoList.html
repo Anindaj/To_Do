@@ -1,37 +1,77 @@
 <!DOCTYPE html>
-<html lang="fa">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>لیست کارها</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" />
     <link rel="stylesheet" href="CSS/CSS.css">
 </head>
 
 <body>
-    <header>
-        <h1>TO DO LIST</h1> 
-    </header>
-<main>
-    <div class="task-list">
-        <ul id="task-list"></ul>
-    </div>
-    <div class="task-form">
-            <input type="text" id="task-input" placeholder="کار جدید خود را وارد کنید" required>
-            
-            <label for="task-time">ساعت</label>
-            <input type="time" id="task-time" required>
-            
-            <label for="task-date">تاریخ</label>
-            <input type="date" id="task-date" required>
-            
-            <label for="task-details">جزییات</label>
-            <textarea id="task-details" placeholder=".. جزییات کار"></textarea>
 
-        <button id="add-task-button">اضافه کردن</button>
-    </div>
-</main>
 
+    <div class="slider-container">
+        <div class="left-slide">
+
+            <div style="background-color: lightblue">
+                <div class="task-list">
+                    <div class="clock-container">
+                        <div class="clock">
+                            <div class="needle hour"></div>
+                            <div class="needle minute"></div>
+                            <div class="needle second"></div>
+                            <div class="center-point"></div>
+                        </div>
+                    
+                        <div class="time"></div>
+                        <div class="date"></div>
+                    </div>
+
+                    <div id="task-list"></div>
+                </div>
+            </div>
+
+        </div>
+        <div class="right-slide">
+
+            <div>
+                
+                <div class="container">
+
+                    <div class="header-form">
+                    <label class="toggle"><i class="fas fa-moon"></i></label>
+
+                    <h1>TO DO LIST</h1>
+                    </div>
+
+                    <form>
+                        <div class="form-control">
+                            <input type="text" id="task-input" required>
+                            <label>Enter New List</label>
+                        </div>
+                        <div class="form-control">
+                            <input type="time" id="task-time" required>
+                        </div>
+                        <div class="form-control">
+                            <input type="date" id="task-date" required>
+                        </div>
+                        <div class="form-control">
+
+                            <textarea id="task-details" type="textarea" required></textarea>
+                            <label>Enter Details</label>
+                        </div>
+                        <p class="text" id="charCount">90 Writing Limitation</p>
+                        
+                        <button class="btn" id="add-task-button">ADD TO LIST</button>
+                
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    
     <script src="JavaScript/JS.js"></script>
 </body>
 
